@@ -57,7 +57,7 @@ The project includes:
 
 # 5. Contact
 
-   Created by Zachary Fuellhart.
-   email: znf5026@psu.edu
-   GitHub: zachfuellhart
-   Feel free to reach out for questions or collaboration.
+   - Created by Zachary Fuellhart.
+   - email: znf5026@psu.edu
+   - GitHub: zachfuellhart
+   - Feel free to reach out for questions or collaboration.
