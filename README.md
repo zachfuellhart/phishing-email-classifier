@@ -51,7 +51,10 @@ The project includes:
 
    - Model achieves approximately 98% accuracy on the test dataset.
    - Includes classification report with precision, recall, and F1-score.
-   
+
+# 5. License  
+   This project is licensed under the MIT License - see the LICENSE file for details.
+
 # 5. Contact
 
    Created by Zachary Fuellhart.
