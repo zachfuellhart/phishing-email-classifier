@@ -55,6 +55,7 @@ phishing-email-classifier/
 - ├── app.py                   # Streamlit app to test emails
 - ├── phishing_model.joblib    # Saved trained model
 - ├── requirements.txt         # Required Python packages
+- ├── runtime.txt              # Python version specification for deployment (e.g., python-3.10.11)
 - ├── test_phishing_model.py   # Script to test the model's performance
 - ├── vectorizer.joblib        # Saved TF-IDF vectorizer
 
