@@ -26,6 +26,7 @@ The project includes:
    ```bash
    git clone https://github.com/zachfuellhart/phishing-email-classifier.git
    cd phishing-email-classifier
+
 2. Create and activate a virtual environment (optional but recommended):
    ```bash
    python -m venv venv
@@ -40,6 +41,10 @@ The project includes:
    python AI_Phishing_ZF.py
 5. Run the Streamlit app to test emails interactively:
    streamlit run app.py
+
+## 2.3 Dataset
+The phishing email dataset used to train this model was sourced from Keggle. 
+It contains over 82,000 labeled emails (phishing and legitimate) and is publicly available at: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset Citation: *Al-Subaiey, A., Al-Thani, M., Alam, N. A., Antora, K. F., Khandakar, A., & Zaman, S. A. U. (2024, May 19). Novel Interpretable and Robust Web-based AI Platform for Phishing Email Detection. ArXiv.org. https://arxiv.org/abs/2405.11619* 
 
 # 3. Usage   
 
