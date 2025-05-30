@@ -48,15 +48,15 @@ It contains over 82,000 labeled emails (phishing and legitimate) and is publicly
 
 ## 2.4 Project Structure
 phishing-email-classifier/
-├── .gitignore               # Specifies intentionally untracked files to ignore
-├── AI_Phishing_ZF.py        # Core script to train and save the model
-├── LICENSE                  # MIT License file
-├── README.md                # Project overview and usage guide
-├── app.py                   # Streamlit app to test emails
-├── phishing_model.joblib    # Saved trained model
-├── requirements.txt         # Required Python packages
-├── test_phishing_model.py   # Script to test the model's performance
-├── vectorizer.joblib        # Saved TF-IDF vectorizer
+- ├── .gitignore               # Specifies intentionally untracked files to ignore
+- ├── AI_Phishing_ZF.py        # Core script to train and save the model
+- ├── LICENSE                  # MIT License file
+- ├── README.md                # Project overview and usage guide
+- ├── app.py                   # Streamlit app to test emails
+- ├── phishing_model.joblib    # Saved trained model
+- ├── requirements.txt         # Required Python packages
+- ├── test_phishing_model.py   # Script to test the model's performance
+- ├── vectorizer.joblib        # Saved TF-IDF vectorizer
 
 # 3. Usage   
 
