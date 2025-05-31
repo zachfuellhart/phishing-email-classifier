@@ -3,6 +3,9 @@
 ## 1.1 Overview
 This project is a machine learning application that detects phishing emails based on their content. It uses a Logistic Regression model trained on a large dataset of labeled emails to classify emails as phishing or legitimate.
 
+Preview of application UI:
+![image](https://github.com/user-attachments/assets/cfe8cc4a-3834-4e2e-a18d-8e9e0b6956c0)
+
 The project includes:
 - Data preprocessing and cleaning
 - TF-IDF vectorization for text feature extraction
