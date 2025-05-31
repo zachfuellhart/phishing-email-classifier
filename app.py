@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import re
 import string
+from sklearn.exceptions import NotFittedError
 
 # Load saved model and vectorizer
 model = joblib.load("phishing_model.joblib")
@@ -27,7 +28,12 @@ if st.button("Predict"):
         st.warning("Please enter some email text!")
     else:
         cleaned = clean_text(user_input)
-        vector = vectorizer.transform([cleaned])
+        try:
+            vector = vectorizer.transform([cleaned])
+        except NotFittedError:
+            st.error("Vectorizer is not fitted. Please retrain the model.")
+            st.stop()
+
         prediction = model.predict(vector)[0]
 
         if prediction == 1:
