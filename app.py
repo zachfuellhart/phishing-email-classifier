@@ -2,31 +2,11 @@ import streamlit as st
 import joblib
 import re
 import string
-import os
 from sklearn.exceptions import NotFittedError
 
-# Set up base directory and paths
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "phishing_model.joblib")
-vectorizer_path = os.path.join(BASE_DIR, "vectorizer.joblib")
-
-# Optional debug output
-st.write("Current working directory:", BASE_DIR)
-st.write("Files in directory:", os.listdir(BASE_DIR))
-
-# Load saved model
-if not os.path.exists(model_path):
-    st.error(f"Model not found at {model_path}")
-    st.stop()
-
-model = joblib.load(model_path)
-
-# Load vectorizer
-if not os.path.exists(vectorizer_path):
-    st.error(f"Vectorizer not found at {vectorizer_path}")
-    st.stop()
-
-vectorizer = joblib.load(vectorizer_path)
+# Load saved model and vectorizer
+model = joblib.load("phishing_model.joblib")
+vectorizer = joblib.load("vectorizer.joblib")
 
 # Text cleaning function (same as training)
 def clean_text(text):
@@ -53,9 +33,6 @@ if st.button("Predict"):
         except NotFittedError:
             st.error("Vectorizer is not fitted. Please retrain the model.")
             st.stop()
-        except Exception as e:
-            st.error(f"Error transforming input: {e}")
-            st.stop()
 
         prediction = model.predict(vector)[0]
 
@@ -63,4 +40,5 @@ if st.button("Predict"):
             st.error("⚠️ This email is likely PHISHING.")
         else:
             st.success("✅ This email is likely NOT phishing.")
+
 
