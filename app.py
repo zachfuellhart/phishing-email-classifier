@@ -2,7 +2,6 @@ import streamlit as st
 import joblib
 import re
 import string
-from sklearn.exceptions import NotFittedError
 
 # Load saved model and vectorizer
 model = joblib.load("phishing_model.joblib")
@@ -18,7 +17,7 @@ def clean_text(text):
 
 # Streamlit UI
 st.title("Phishing Email Classifier")
-st.write("There was an error running the application. Try again soon.")
+st.write("Enter an email text below to check if it's phishing or not.")
 
 # Input box
 user_input = st.text_area("Email Text", height=200)
@@ -28,17 +27,10 @@ if st.button("Predict"):
         st.warning("Please enter some email text!")
     else:
         cleaned = clean_text(user_input)
-        try:
-            vector = vectorizer.transform([cleaned])
-        except NotFittedError:
-            st.error("There was an error running the application.")
-            st.stop()
-
+        vector = vectorizer.transform([cleaned])
         prediction = model.predict(vector)[0]
 
         if prediction == 1:
             st.error("⚠️ This email is likely PHISHING.")
         else:
             st.success("✅ This email is likely NOT phishing.")
-
-
