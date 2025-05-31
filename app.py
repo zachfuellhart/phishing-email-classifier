@@ -18,7 +18,7 @@ def clean_text(text):
 
 # Streamlit UI
 st.title("Phishing Email Classifier")
-st.write("Enter an email text below to check if it's phishing or not.")
+st.write("There was an error running the application. Try again soon.")
 
 # Input box
 user_input = st.text_area("Email Text", height=200)
