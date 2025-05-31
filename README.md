@@ -38,11 +38,13 @@ The project includes:
    # On macOS/Linux
    source venv/bin/activate
 3. Install required packages:
+   ```bash
    pip install -r requirements.txt
-4. Train the model or load saved model/vectorizer by running:
+5. Train the model or load saved model/vectorizer by running:
    ```bash
    python AI_Phishing_ZF.py
-5. Run the Streamlit app to test emails interactively:
+6. Run the Streamlit app to test emails interactively:
+   ```bash
    streamlit run app.py
 
 ## 2.3 Dataset
