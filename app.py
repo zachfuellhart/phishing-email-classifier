@@ -31,7 +31,7 @@ if st.button("Predict"):
         try:
             vector = vectorizer.transform([cleaned])
         except NotFittedError:
-            st.error("Vectorizer is not fitted. Please retrain the model.")
+            st.error("There was an error running the application.")
             st.stop()
 
         prediction = model.predict(vector)[0]
