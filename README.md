@@ -78,7 +78,7 @@ phishing-email-classifier/
 # 5. License  
    This project is licensed under the MIT License - see the LICENSE file for details.
 
-# 5. Contact
+# 6. Contact
 
    - Created by Zachary Fuellhart.
    - email: znf5026@psu.edu
